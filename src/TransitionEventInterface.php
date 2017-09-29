@@ -2,10 +2,8 @@
 
 namespace Dhii\Events;
 
-use Dhii\State\StateAwareInterface;
 use Dhii\State\StateMachineInterface;
 use Dhii\State\TransitionAwareInterface;
-use Dhii\Util\String\StringableInterface as Stringable;
 use Psr\EventManager\EventInterface;
 
 /**
@@ -15,8 +13,7 @@ use Psr\EventManager\EventInterface;
  */
 interface TransitionEventInterface extends
     EventInterface,
-    TransitionAwareInterface,
-    StateAwareInterface
+    TransitionAwareInterface
 {
     /**
      * {@inheritdoc}
@@ -26,15 +23,6 @@ interface TransitionEventInterface extends
      * @return StateMachineInterface The state machine.
      */
     public function getTarget();
-
-    /**
-     * Retrieves the new state after (and if) the transition is applied.
-     *
-     * @since [*next-version*]
-     *
-     * @return string|Stringable The new state.
-     */
-    public function getNewState();
 
     /**
      * Indicates whether or not the transition associated with this event should be aborted.
