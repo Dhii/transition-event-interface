@@ -14,7 +14,7 @@
     "require": {
         "php": "^5.3 | ^7.0",
         "dhii/psr-14": "dev-master",
-        "dhii/machine-state-machine-interface": "dev-task/initial-interfaces"
+        "dhii/machine-state-machine-interface": "dev-develop"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
