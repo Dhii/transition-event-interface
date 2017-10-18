@@ -29,6 +29,7 @@ class TransitionEventInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
+	        ->getStateMachine()
             ->getTransition()
             ->abortTransition()
             ->isTransitionAborted()
@@ -67,6 +68,12 @@ class TransitionEventInterfaceTest extends TestCase
             $subject,
             'Test subject does not implement parent interface.'
         );
+
+	    $this->assertInstanceOf(
+		    'Dhii\State\StateMachineAwareInterface',
+		    $subject,
+		    'Test subject does not implement parent interface.'
+	    );
 
         $this->assertInstanceOf(
             'Psr\EventManager\EventInterface',

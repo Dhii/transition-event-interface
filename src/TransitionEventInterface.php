@@ -2,7 +2,7 @@
 
 namespace Dhii\Events;
 
-use Dhii\State\StateMachineInterface;
+use Dhii\State\StateMachineAwareInterface;
 use Dhii\State\TransitionAwareInterface;
 use Psr\EventManager\EventInterface;
 
@@ -13,17 +13,9 @@ use Psr\EventManager\EventInterface;
  */
 interface TransitionEventInterface extends
     EventInterface,
-    TransitionAwareInterface
+    TransitionAwareInterface,
+	StateMachineAwareInterface
 {
-    /**
-     * {@inheritdoc}
-     *
-     * @since [*next-version*]
-     *
-     * @return StateMachineInterface The state machine.
-     */
-    public function getTarget();
-
     /**
      * Indicates whether or not the transition associated with this event should be aborted.
      *
