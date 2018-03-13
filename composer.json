@@ -13,7 +13,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^5.3 | ^7.0",
-        "dhii/psr-14": "dev-master",
+        "dhii/psr-14": "^0.1",
         "dhii/machine-state-machine-interface": "dev-develop"
     },
     "require-dev": {
@@ -31,11 +31,5 @@
     "scripts": {
         "test": "phpunit",
         "csfix": "php-cs-fixer fix -vvv"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/Dhii/psr-14"
-        }
-    ]
+    }
 }
