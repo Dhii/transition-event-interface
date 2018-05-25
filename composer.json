@@ -28,6 +28,12 @@
             "Dhii\\Events\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Dhii\\Events\\UnitTest\\": "test/unit",
+            "Dhii\\Events\\FuncTest\\": "test/functional"
+        }
+    },
     "scripts": {
         "test": "phpunit",
         "csfix": "php-cs-fixer fix -vvv"
